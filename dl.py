@@ -1,12 +1,11 @@
 import sys, os
 from skillshare import Skillshare, splash
-from magic import cookie
 
 # or by class ID:
 # dl.download_course_by_class_id(189505397)
 
 def main():
-    dl = Skillshare(cookie)
+    dl = Skillshare("PHPSESSID=c2d7817afed91a4e78500a44933c506f")
     course_url = sys.argv[1]
     dl.download_course_by_url(course_url)
 
